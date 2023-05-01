@@ -1,0 +1,5 @@
+<app-total [total]="total"></app-total>
+
+<div class="items-container" (change)="getTotal()">
+    <app-item *ngFor="let item of items" [item]="item" (deleteItem)="onDelete($event)" (addQuantity)="addQuantity($event)" (restQuantity)="restQuantity($event)" class="app-item"></app-item>
+</div>

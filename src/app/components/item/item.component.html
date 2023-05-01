@@ -1,0 +1,22 @@
+<div class="item-data-container" [ngClass]="{'completed':item.completed}">
+    <div class="checkbox">
+        <input type="checkbox" name="" id="" [checked]="item.completed" (change)="onToggle(item)">
+    </div>
+    <div class="name">
+        {{item.name}}
+    </div>
+    <div class="price">
+        {{item.price | currency}}
+    </div>
+    <div class="quantity">
+        {{item.quantity}}
+        <button (click)="onQuantityChange(-1)">-</button>
+        <button (click)="onQuantityChange(1)">+</button>
+    </div>
+    <div class="total">
+        {{item.price * item.quantity | currency}}
+    </div>
+    <div class="delete">
+        <button (click)="onDelete(item)">Delete</button>
+    </div>
+</div>

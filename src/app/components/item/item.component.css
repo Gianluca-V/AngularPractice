@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+.completed{
+    background-color: #afa;
+    color: #999;
+}
+
+.item-data-container{
+    border: 1px solid black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding:2rem;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    text-align: center;
+}
+.item-data-container:has(input[type="checkbox"]:not(:checked)):hover{
+    background-color: #cccc;
+}
+
+.checkbox input{
+    width: 100%;
+    height: 100%;
+}
+.checkbox input:checked{
+    accent-color: #afa;
+}
+.total{
+    font-weight: 900;
+}
+
+.delete button{
+    width: 70%;
+    height: 100%;
+    background-color: #ff2020;
+    border-radius: 3px;
+    font-weight: 900;
+    transition: transform 0.3s ease;
+}
+
+.delete button:hover{
+    transform: scale(1.1);
+}
